@@ -2,7 +2,6 @@
   "name": "roiroi.dev",
   "version": "1.0.0",
   "description": "roiroi dec",
-  "main": "index.js",
   "private": true,
   "repository": "git@github.com:rrih/roiroi.dev.git",
   "author": "rrih <rsklv@icloud.com>",
