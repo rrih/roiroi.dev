@@ -2,7 +2,6 @@ import { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router';
 import { pageview } from  '../lib/gtag';
-import { GA_TRACKING_ID } from '../lib/gtag';
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     // Google Analyticsをページ遷移時にも対応させる
