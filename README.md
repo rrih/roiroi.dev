@@ -1,3 +1,3 @@
 # roiroi.dev
 
-ホームページ
+Next.js
