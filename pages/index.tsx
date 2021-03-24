@@ -14,8 +14,6 @@ const IndexPage = () => {
             .catch((e) => {
                 console.log(e)
             })
-            .finally(() => {
-            });
     }, [])
 
     /**
@@ -39,6 +37,34 @@ const IndexPage = () => {
         return  <a href={`https://github.com/${onlyName}`}>{getGithubProp('company')}</a>
     }
 
+    /**
+     * GitHub の Twitter screen name からリンクを取得
+     */
+    const getLinkByTwitterId = (): JSX.Element => {
+        const twitterUsername = data ? data['twitter_username'] : ''
+        return <a href={`https://twitter.com/${twitterUsername}`}>@{twitterUsername}</a>
+    }
+
+    /**
+     * bio の中に screen name がある場合、link の dom に差し替える
+     *
+     * @param void
+     * @return JSX.Element | string | null
+     */
+    const getBio = (): JSX.Element | string | null => {
+        if (data == null) {
+            return null
+        }
+        const bio: string = data.bio
+        if (bio.indexOf('@rrih') != -1) {
+            const first = bio.split('@rrih')[0]
+            const second = bio.split('@rrih')[1]
+            const dom: JSX.Element = <>{first}<a href={getGithubProp('html_url')}>@rrih</a>{second}</>
+            return dom
+        }
+        return bio
+    }
+
     return <>
         <Header>
             <div>roiroi.dev</div>
@@ -46,16 +72,16 @@ const IndexPage = () => {
         <SectionBody>
             <h2>{getGithubProp('name')}</h2>
             <div><Img src={getGithubProp('avatar_url')} /></div>
-            <div>1997.9 ~</div>
-            <div>{getGithubProp('bio')}</div>
+            <div>{getBio()}</div>
+            <div>1997.9 から生きてます</div>
+            人生おしまいです…
             <div>2017.4 - 2021.3 某大理工学部</div>
-            <div>2020.9 -  software developer at lancers, inc.</div>
-            <div>
-                TypeScript - PHP🐘🍰
-            </div>
+            <div>2020.9 - 2021.3 某社(part-time)</div>
+            <div>2021.4 - 某社(full-time)</div>
             <div>followers: {getGithubProp('followers')} following: {getGithubProp('following')}</div>
             <div>公開リポジトリ数: {getGithubProp('public_repos')} 公開 gist 数: {getGithubProp('public_gists')}</div>
             <div>所属: {getLinksByCompany()}</div>
+            <div>Twitter: {getLinkByTwitterId()}</div>
             <div><a href={getGithubProp('html_url')}>GitHub</a> created at {getGithubProp('created_at')}</div>
             <div><a href={getGithubProp('html_url')}>GitHub</a> updated at {getGithubProp('updated_at')}</div>
         </SectionBody>
@@ -92,5 +118,6 @@ const Footer = styled.footer`
 
 const SectionBody = styled.div`
     margin: 25% 0%;
-    text-align: center;
+    // text-align: center;
+    margin-left: 15px;
 `
