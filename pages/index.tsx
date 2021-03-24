@@ -17,25 +17,47 @@ const IndexPage = () => {
             .finally(() => {
             });
     }, [])
+
+    /**
+     * nullable ではない場合、data から指定したプロパティを取り出す。
+     *
+     * @param propName string
+     * @return string
+     */
+    const getGithubProp = (propName: string): string => {
+        return data ? data[propName] : '';
+    }
+
+    /**
+     * 所属のリンクを取得
+     *
+     * @param void
+     * @return JSX.Element
+     */
+    const getLinksByCompany = (): JSX.Element => {
+        const onlyName: string = data ? data['company'].split('@')[1] : ''
+        return  <a href={`https://github.com/${onlyName}`}>{getGithubProp('company')}</a>
+    }
+
     return <>
         <Header>
             <div>roiroi.dev</div>
         </Header>
         <SectionBody>
-            <h2>🥺</h2>
-            <div><Img src={data.avatar_url} /></div>
+            <h2>{getGithubProp('name')}</h2>
+            <div><Img src={getGithubProp('avatar_url')} /></div>
             <div>1997.9 ~</div>
-            <div>{data != null ? data.name : null}</div>
-            <div>{data != null ? data.bio : null}</div>
+            <div>{getGithubProp('bio')}</div>
             <div>2017.4 - 2021.3 某大理工学部</div>
-            <div>2020.9 -  某社 web dev part time job</div>
+            <div>2020.9 -  software developer at lancers, inc.</div>
             <div>
                 TypeScript - PHP🐘🍰
             </div>
-            <div>followers: {data.followers} following: {data.following}</div>
-            <div>公開リポジトリ数: {data.public_repos} 公開 gist 数: {data.public_gists}</div>
-            <div><a href={data != null ? data.html_url : ''}>GitHub</a> created at {data != null ? data.created_at : null}</div>
-            <div><a href={data != null ? data.html_url : ''}>GitHub</a> updated at {data != null ? data.updated_at : null}</div>
+            <div>followers: {getGithubProp('followers')} following: {getGithubProp('following')}</div>
+            <div>公開リポジトリ数: {getGithubProp('public_repos')} 公開 gist 数: {getGithubProp('public_gists')}</div>
+            <div>所属: {getLinksByCompany()}</div>
+            <div><a href={getGithubProp('html_url')}>GitHub</a> created at {getGithubProp('created_at')}</div>
+            <div><a href={getGithubProp('html_url')}>GitHub</a> updated at {getGithubProp('updated_at')}</div>
         </SectionBody>
         <Footer>&copy; {new Date().getFullYear()} kawahara</Footer>
     </>
