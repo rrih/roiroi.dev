@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios";
-import { Footer, Header, Img, SectionBody } from "./styles";
+import { Footer, Header, SectionBody } from "../lib/styles";
 import { GithubBio } from "../interface/githubBio";
-import { getBio, getGithubProp, getLinkByTwitterId, getLinksByCompany } from "./ghUtil";
-import BioIndex from "./bio";
+import BioIndex from "../components/bio";
 
 const IndexPage = () => {
     const [data, setData] = useState<GithubBio>();
@@ -16,9 +15,6 @@ const IndexPage = () => {
             })
             .catch((e) => {
                 console.log(e)
-            })
-            .finally(() => {
-                // console.log(data)
             })
     }, [])
 
