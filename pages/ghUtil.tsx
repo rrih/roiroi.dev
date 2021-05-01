@@ -34,7 +34,6 @@ export const getLinksByCompany = (data: GithubBio | undefined): JSX.Element | nu
         return null
     }
     const onlyName: string = data ? data['company'].split('@')[1] : ''
-    console.log(onlyName)
     return  <a href={`https://github.com/${onlyName}`}>{getGithubProp('company', data)}</a>
 }
 
@@ -66,7 +65,6 @@ export const getBio = (data: GithubBio | undefined): JSX.Element | string | null
         return null
     }
     const bio: string = data.bio
-    console.log(bio)
     if (bio.indexOf('@rrih') != -1) {
         const first = bio.split('@rrih')[0]
         const second = bio.split('@rrih')[1]

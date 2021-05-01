@@ -3,7 +3,7 @@ import { GithubBio } from "../interface/githubBio";
 import { getBio, getGithubProp, getLinkByTwitterId, getLinksByCompany } from "./ghUtil";
 import { Img } from "./styles";
 
-const BioIndex = ({data}: GithubBio) => {
+const BioIndex = ({data}) => {
     return <>
         <h2>{getGithubProp('name', data)}</h2>
         <div><Img src={getGithubProp('avatar_url', data)} /></div>
