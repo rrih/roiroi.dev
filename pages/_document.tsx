@@ -26,7 +26,7 @@ class CustomDocument extends Document {
                     <link rel="shortcut icon" href="https://github.com/rrih.png" />
                     <style>{`html,body { margin: 0; padding: 0; }`}</style>
                 </Head>
-                <body>
+                <body style={{fontFamily: "MS Pゴシック"}}>
                     <Main />
                     <NextScript />
                 </body>

@@ -23,8 +23,8 @@ const BioIndex = ({ data }: any) => {
         <h2>{name}</h2>
         <div><Img src={avatar_url} /></div>
         <div>{getBio(bio, html_url)}</div>
-        <div>2017.4 - 2021.3 東京電機大理工学部</div>
-        <div>2021.4 - ランサーズ株式会社</div>
+        <div>2017.4 - 2021.3 <a href="https://www.dendai.ac.jp/about/undergraduate/rikougaku/rd/">情報系学部</a>卒</div>
+        <div>2021.4 - <a href="https://www.lancers.jp/">Lancers</a>の開発</div>
         <div>followers: {followers} following: {following}</div>
         <div>公開リポジトリ数: {public_repos} 公開 gist 数: {public_gists}</div>
         <div>所属: {getLinksByCompany(company)}</div>
