@@ -23,14 +23,23 @@ const BioIndex = ({ data }: any) => {
         <h2>{name}</h2>
         <div><Img src={avatar_url} /></div>
         <div>{getBio(bio, html_url)}</div>
-        <div>2017.4 - 2021.3 <a href="https://www.dendai.ac.jp/about/undergraduate/rikougaku/rd/">情報系学部</a>卒</div>
-        <div>2021.4 - <a href="https://www.lancers.jp/">Lancers</a>の開発</div>
+        <h2>職歴</h2>
+        <div>2021.4 - <a href="https://www.lancers.co.jp/">某社</a></div>
+        <h2>学歴</h2>
+        <div>2017.4 - 2021.3 <a href="https://www.dendai.ac.jp/about/undergraduate/rikougaku/rd/">東京電機大学（理工学部、情報システムデザイン学系）</a></div>
+        <h2>その他</h2>
         <div>followers: {followers} following: {following}</div>
-        <div>公開リポジトリ数: {public_repos} 公開 gist 数: {public_gists}</div>
-        <div>所属: {getLinksByCompany(company)}</div>
-        <div>Twitter: {getLinkByTwitterId(twitter_username)}</div>
+        <div>public repos: {public_repos} public gists: {public_gists}</div>
+        <div>belongs: {getLinksByCompany(company)}</div>
         <div><a href={data ? html_url : ''}>GitHub</a> created at {created_at}</div>
         <div><a href={data ? html_url : ''}>GitHub</a> updated at {updated_at}</div>
+        <h2>SNS等</h2>
+        <div>Twitter: {getLinkByTwitterId(twitter_username)}</div>
+        <div>Instagram: <a href="https://instagram.com/rrih_dev">@rrih_dev</a></div>
+        <div>Facebook: <a href="https://facebook.com/rsklv">@rsklv</a></div>
+        <div>Wantedly: <a href="https://wantedly.com/id/rrih">@rrih</a></div>
+        <div>Qiita: <a href="https://qiita.com/rrih">@rrih</a></div>
+        <div>Zenn: <a href="https://zenn.dev/ro">@ro</a></div>
     </>
 }
 

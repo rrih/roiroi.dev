@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '../lib/gtag';
+import siteFont from '../lib/siteFont';
 
 class CustomDocument extends Document {
     render(): JSX.Element {
@@ -26,7 +27,7 @@ class CustomDocument extends Document {
                     <link rel="shortcut icon" href="https://github.com/rrih.png" />
                     <style>{`html,body { margin: 0; padding: 0; }`}</style>
                 </Head>
-                <body style={{fontFamily: "MS Pゴシック"}}>
+                <body style={{fontFamily: siteFont}}>
                     <Main />
                     <NextScript />
                 </body>
