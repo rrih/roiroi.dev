@@ -24,7 +24,7 @@ const BioIndex = ({ data }: any) => {
         <div><Img src={avatar_url} /></div>
         <div>{getBio(bio, html_url)}</div>
         <h2>職歴</h2>
-        <div>2021.4 - <a href="https://www.lancers.co.jp/">某社</a></div>
+        <div>2021.4 - <a href="https://www.lancers.co.jp/">ランサーズ株式会社</a></div>
         <h2>学歴</h2>
         <div>2017.4 - 2021.3 <a href="https://www.dendai.ac.jp/about/undergraduate/rikougaku/rd/">東京電機大学（理工学部、情報システムデザイン学系）</a></div>
         <h2>その他</h2>
@@ -38,8 +38,13 @@ const BioIndex = ({ data }: any) => {
         <div>Instagram: <a href="https://instagram.com/rrih_dev">@rrih_dev</a></div>
         <div>Facebook: <a href="https://facebook.com/rsklv">@rsklv</a></div>
         <div>Wantedly: <a href="https://wantedly.com/id/rrih">@rrih</a></div>
+        <div>Lancers: <a href="https://www.lancers.jp/profile/kawahara_ryohei">kawahara_ryohei</a></div>
         <div>Qiita: <a href="https://qiita.com/rrih">@rrih</a></div>
         <div>Zenn: <a href="https://zenn.dev/ro">@ro</a></div>
+        <div>LAPRAS: <a href="https://lapras.com/public/Q3HIOW6">Q3HIOW6</a></div>
+        <div>YOUTRUST: <a href="https://youtrust.jp/users/rrih">rrih</a></div>
+        <h2>ほしいものリスト</h2>
+        <div>wish list: <a href="https://www.amazon.co.jp/hz/wishlist/genericItemsPage/1PVT09ZQ3TIQN">here</a></div>
     </>
 }
 
