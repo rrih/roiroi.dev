@@ -1,5 +1,5 @@
 import React from "react"
-import { getBio, getLinkByTwitterId, getLinksByCompany } from "../lib/ghUtil";
+import { getBio, getLinksByCompany } from "../lib/ghUtil";
 import { Img } from "../lib/styles";
 
 
@@ -16,7 +16,7 @@ const BioIndex = ({ data }: any) => {
         created_at,
         updated_at,
         company,
-        twitter_username
+        // twitter_username
     } = data
 
     return <>
