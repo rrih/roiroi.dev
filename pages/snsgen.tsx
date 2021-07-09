@@ -1,5 +1,5 @@
 const IndexPage = () => {
-    return <>hoge</>
+    return <>sns generator page</>
 }
 
 export default IndexPage
