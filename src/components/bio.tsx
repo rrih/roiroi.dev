@@ -34,7 +34,7 @@ const BioIndex = ({ data }: any) => {
         <div><a href={data ? html_url : ''}>GitHub</a> created at {created_at}</div>
         <div><a href={data ? html_url : ''}>GitHub</a> updated at {updated_at}</div>
         <h2>SNS等</h2>
-        <div>Twitter: {getLinkByTwitterId(twitter_username)}</div>
+        <div>Twitter: <a href="https://twitter.com/rrih_dev">@rrih_dev</a></div>
         <div>Instagram: <a href="https://instagram.com/rrih_dev">@rrih_dev</a></div>
         <div>Facebook: <a href="https://facebook.com/rsklv">@rsklv</a></div>
         <div>Wantedly: <a href="https://wantedly.com/id/rrih">@rrih</a></div>
