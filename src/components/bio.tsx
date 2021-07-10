@@ -42,6 +42,7 @@ const BioIndex = ({ data }: any) => {
         <div>Qiita: <a href="https://qiita.com/rrih">@rrih</a></div>
         <div>Zenn: <a href="https://zenn.dev/ro">@ro</a></div>
         <div>LAPRAS: <a href="https://lapras.com/public/Q3HIOW6">Q3HIOW6</a></div>
+        <div>Findy: <a href="https://findy-code.io/share_profiles/nxH7_JzbJ74Q4">職務経歴書</a></div>
         <div>YOUTRUST: <a href="https://youtrust.jp/users/rrih">rrih</a></div>
         <h2>ほしいものリスト</h2>
         <div>wish list: <a href="https://www.amazon.co.jp/hz/wishlist/genericItemsPage/1PVT09ZQ3TIQN">here</a></div>
